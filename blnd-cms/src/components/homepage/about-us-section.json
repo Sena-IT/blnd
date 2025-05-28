@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_homepage_about_us_sections",
+  "info": {
+    "displayName": "about_us_section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "section_description": {
+      "type": "richtext"
+    },
+    "section_title": {
+      "type": "text"
+    },
+    "about_us_media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

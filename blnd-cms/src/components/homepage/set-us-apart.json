@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_homepage_set_us_aparts",
+  "info": {
+    "displayName": "set_us_apart"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "set_us_apart_points": {
+      "displayName": "set_us_apart_points",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.set-us-apart-points"
+    }
+  }
+}

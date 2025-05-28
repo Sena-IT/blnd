@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_homepage_set_us_apart_points",
+  "info": {
+    "displayName": "set_us_apart_points"
+  },
+  "options": {},
+  "attributes": {
+    "point_title": {
+      "type": "text"
+    },
+    "point_description": {
+      "type": "text"
+    }
+  }
+}

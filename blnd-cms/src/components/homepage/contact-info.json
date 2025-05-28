@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_homepage_contact_infos",
+  "info": {
+    "displayName": "contact_info",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "type": "text"
+    },
+    "instagram": {
+      "type": "richtext"
+    },
+    "email": {
+      "type": "richtext"
+    },
+    "linkedIn": {
+      "type": "richtext"
+    }
+  }
+}

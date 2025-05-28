@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_homepage_choose_uses",
+  "info": {
+    "displayName": "choose_us"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "choose_us_points": {
+      "displayName": "Choose_us_points",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.choose-us-points"
+    }
+  }
+}

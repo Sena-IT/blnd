@@ -1,0 +1,151 @@
+"use client";
+import HeadingLayout from "@/components/layouts/HeadingLayout";
+import SectionSpacingLayout from "@/components/layouts/SectionSpacingLayout";
+import { Button } from "@/components/ui/button";
+import { HomeDataContactUs } from "@/types/types";
+import React, { useState } from "react";
+import { FaInstagram } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
+import { FaLinkedin } from "react-icons/fa6";
+
+const ContactUs = ({ data }: { data: HomeDataContactUs }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
+  return (
+    <SectionSpacingLayout id="contact-us" >
+      <HeadingLayout heading="Contact Us" />
+
+      <div className="rounded-2xl bg-lime-50 p-5 h-full">
+        <div className="h-full">
+          <h2 className="text-3xl text-brand-secondary font-medium text-center">
+            {data?.title}
+          </h2>
+          <p className="text-2xl mt-4 font-normal text-brand-secondary text-justify md:text-center">
+            {data?.subtitle}
+          </p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-start space-y-6 lg:space-x-4 h-full p-5">
+          <div className="lg:w-1/2 w-full flex flex-col   h-full space-y-6 lg:space-y-12 mt-12">
+            {
+              data?.contact_info.map((info,i)=>(
+                <React.Fragment key={i}>
+                    <div className="flex flex-row items-start space-x-6">
+                      <FaInstagram className="text-brand-secondary w-10 h-10 "/>
+                      <div className="text-2xl font-semibold " dangerouslySetInnerHTML={{__html:info.instagram}}/>
+                        
+                    </div>
+
+                    <div className="flex flex-row items-start space-x-6">
+                      <LuMail className="text-brand-secondary w-12 h-12 "/>
+                      <div className="text-2xl font-semibold " dangerouslySetInnerHTML={{__html:info.email}}/>
+                        
+                    </div>
+
+                    <div className="flex flex-row items-start space-x-6">
+                      <FaLinkedin className="text-brand-secondary w-10 h-10 "/>
+                      <div className="text-2xl font-semibold " dangerouslySetInnerHTML={{__html:info.linkedIn}}/>
+                        
+                    </div>
+                </React.Fragment>
+              ))
+            }
+          </div>
+          <div className="w-[1px] bg-neutral-200 backdrop-blur-2xl self-stretch my-4 lg:my-12 rounded"/>
+          <div className="lg:w-1/2 w-full">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full space-y-4"
+            >
+                <div>
+                  <label className="block font-semibold text-lg mb-1">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="w-full p-2 border bg-white border-gray-300 rounded-lg"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block font-semibold text-lg mb-1">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    className="w-full p-2 border border-gray-300 bg-white rounded-lg"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block font-semibold text-lg mb-1">
+                    Phone (optional)
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    className="w-full p-2 border border-gray-300 bg-white rounded-lg"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                <div>
+                  <label className="block font-semibold text-lg mb-1">Subject</label>
+                  <input
+                    type="text"
+                    name="subject"
+                    className="w-full p-2 border border-gray-300 bg-white rounded-lg"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block font-semibold text-lg mb-1">Message</label>
+                  <textarea
+                    name="message"
+                    rows={4}
+                    className="w-full p-2 border border-gray-300 bg-white rounded-lg"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+           
+
+              <Button className="bg-brand-primary hover:bg-brand-primary cursor-pointer w-full h-12 text-brand-secondary text-lg font-semibold">
+                Send
+              </Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </SectionSpacingLayout>
+  );
+};
+
+export default ContactUs;

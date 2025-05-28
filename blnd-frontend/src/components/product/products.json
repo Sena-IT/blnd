@@ -1,0 +1,54 @@
+[
+  {
+    "id":1,
+    "name": "Anti-Inflammatory Blend",
+    "description": "A turmeric-based anti-inflammatory blend with ginger and black pepper — your daily dose of calm",
+    "prices": {
+      "sachet": 90,
+      "weeklyBundle": 455
+    },
+    "images":[
+      {
+        "link":"assets/AIB Front.jpeg"
+      },
+      {
+        "link":"assets/AIB Back.png"
+      }
+    ]
+   
+  },
+  {
+    "id":2,
+    "name": "ABC Juice Blend",
+    "description": "A powerful antioxidant-packed drink mix for skin health and detox",
+    "prices": {
+      "sachet": 125,
+      "weeklyBundle": 700
+    },
+    "images":[
+      {
+        "link":"assets/ABC Front.jpeg"
+      },
+      {
+        "link":"assets/ABC Back.png"
+      }
+    ]
+  },
+  {
+    "id":3,
+    "name": "Chocolate Banana Smoothie Blend",
+    "description": "A fibre-rich, protein-packed smoothie mix for satiety and energy which is your perfect meal replacement",
+    "prices": {
+      "sachet": 199,
+      "weeklyBundle": 1225
+    },
+    "images":[
+      {
+        "link":"assets/COS Front.jpeg"
+      },
+      {
+        "link":"assets/COS Back.png"
+      }
+    ]
+  }
+]

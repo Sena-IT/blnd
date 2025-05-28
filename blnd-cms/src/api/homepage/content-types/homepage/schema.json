@@ -1,0 +1,57 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "banner": {
+      "displayName": "Homepage",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.homepage"
+    },
+    "choose_us": {
+      "displayName": "choose_us",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.choose-us"
+    },
+    "set_us_apart": {
+      "displayName": "set_us_apart",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.set-us-apart"
+    },
+    "how_to_use": {
+      "displayName": "how_to_use",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.how-to-use"
+    },
+    "about_us": {
+      "displayName": "about_us",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.about-us"
+    },
+    "contact_us": {
+      "displayName": "contact_us",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.contact-us"
+    },
+    "footer": {
+      "displayName": "footer",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.footer"
+    }
+  }
+}

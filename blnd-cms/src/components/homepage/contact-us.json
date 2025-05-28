@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_homepage_contact_uses",
+  "info": {
+    "displayName": "contact_us"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "contact_info": {
+      "displayName": "contact_info",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.contact-info"
+    }
+  }
+}

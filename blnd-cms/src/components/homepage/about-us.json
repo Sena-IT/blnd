@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_homepage_about_uses",
+  "info": {
+    "displayName": "about_us"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "about_us_section": {
+      "displayName": "about_us_section",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.about-us-section"
+    }
+  }
+}

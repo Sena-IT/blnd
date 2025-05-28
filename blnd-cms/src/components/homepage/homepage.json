@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_homepage_homepages",
+  "info": {
+    "displayName": "banner_images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "banner_image_link": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

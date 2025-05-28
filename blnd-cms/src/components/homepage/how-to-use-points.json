@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_homepage_how_to_use_points",
+  "info": {
+    "displayName": "how_to_use_points"
+  },
+  "options": {},
+  "attributes": {
+    "point_title": {
+      "type": "text"
+    },
+    "point_description": {
+      "type": "text"
+    }
+  }
+}

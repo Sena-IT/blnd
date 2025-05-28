@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_homepage_choose_us_points",
+  "info": {
+    "displayName": "Choose_us_points"
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "text"
+    }
+  }
+}
