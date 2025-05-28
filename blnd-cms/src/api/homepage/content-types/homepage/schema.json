@@ -52,6 +52,12 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.footer"
+    },
+    "products": {
+      "displayName": "products",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.products"
     }
   }
 }

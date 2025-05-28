@@ -130,6 +130,56 @@ export interface HomepageHowToUsePoints extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageItem extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_items';
+  info: {
+    description: '';
+    displayName: 'item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    item_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    item_labels: Schema.Attribute.Component<'homepage.item-labels', true>;
+    item_price: Schema.Attribute.Component<'homepage.item-price', true>;
+    name: Schema.Attribute.Text;
+  };
+}
+
+export interface HomepageItemLabels extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_item_labels';
+  info: {
+    displayName: 'item_labels';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface HomepageItemPrice extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_item_prices';
+  info: {
+    displayName: 'item_price';
+  };
+  attributes: {
+    sachet_price: Schema.Attribute.String;
+    weekly_price: Schema.Attribute.String;
+  };
+}
+
+export interface HomepageProducts extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_products';
+  info: {
+    description: '';
+    displayName: 'products';
+  };
+  attributes: {
+    item: Schema.Attribute.Component<'homepage.item', true>;
+  };
+}
+
 export interface HomepageSetUsApart extends Struct.ComponentSchema {
   collectionName: 'components_homepage_set_us_aparts';
   info: {
@@ -169,6 +219,10 @@ declare module '@strapi/strapi' {
       'homepage.homepage': HomepageHomepage;
       'homepage.how-to-use': HomepageHowToUse;
       'homepage.how-to-use-points': HomepageHowToUsePoints;
+      'homepage.item': HomepageItem;
+      'homepage.item-labels': HomepageItemLabels;
+      'homepage.item-price': HomepageItemPrice;
+      'homepage.products': HomepageProducts;
       'homepage.set-us-apart': HomepageSetUsApart;
       'homepage.set-us-apart-points': HomepageSetUsApartPoints;
     }
