@@ -11,6 +11,7 @@ import MainHeader from "@/components/header";
 import CommonSpacingLayout from "@/components/layouts/CommonSpacingLayout";
 import { ReduxProvider } from "@/redux/ReduxProvider";
 import Footer from "@/site-ui/sections/footer";
+import { ProductsProvider } from "@/context/ProductsProvider";
 
 const inter = League_Spartan({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -43,15 +44,17 @@ export default function RootLayout({
           backgroundSize: "742.4px",
         }}
       >
-        <ReduxProvider>
-          <main className="flex flex-col">
-            <MainHeader />
-            <CommonSpacingLayout>
-              <section className="flex-1">{children}</section>
-            </CommonSpacingLayout>
-            <Footer />
-          </main>
-        </ReduxProvider>
+        <ProductsProvider>
+          <ReduxProvider>
+            <main className="flex flex-col">
+              <MainHeader />
+              <CommonSpacingLayout>
+                <section className="flex-1">{children}</section>
+              </CommonSpacingLayout>
+              <Footer />
+            </main>
+          </ReduxProvider>
+        </ProductsProvider>
       </body>
     </html>
   );

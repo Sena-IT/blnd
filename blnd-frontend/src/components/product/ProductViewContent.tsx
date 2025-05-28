@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import products from "../../components/product/products.json";
 import { Button } from "../ui/button";
 import ProductItemButton from "./ProductItemButton";
+import { useProducts } from "@/context/ProductsProvider";
+import { base_api_url } from "@/api/constants";
 
 const ProductViewContent = ({ id }: { id: number | string  }) => {
+
+  const {products}=useProducts()
   const data = products.find((prod, i) => prod.id === id);
 
-  const [seletcedImage, setSelectedImage] = useState(data?.images[0].link);
+  const [seletcedImage, setSelectedImage] = useState(base_api_url+ (data?.item_image[0].url || ''));
   return (
     <div className="flex flex-col lg:flex-row items-start lg:space-x-6 space-y-6">
       <div className="lg:w-1/2 w-full">
@@ -19,17 +22,17 @@ const ProductViewContent = ({ id }: { id: number | string  }) => {
           </div>
 
           <div className="flex flex-row items-center space-x-4">
-            {data?.images.map((img, i) => (
+            {data?.item_image.map((img, i) => (
               <div
                 key={i}
                 className={`w-[100px] overflow-hidden h-[100px] rounded-2xl ${
-                  img.link === seletcedImage && "ring-4 ring-brand-secondary"
+                  img.url === seletcedImage && "ring-4 ring-brand-secondary"
                 }`}
                 onClick={() => {
-                  setSelectedImage(img.link);
+                  setSelectedImage(img.url);
                 }}
               >
-                <img src={img.link} />
+                <img src={base_api_url+ img.url} />
               </div>
             ))}
           </div>
@@ -50,7 +53,7 @@ const ProductViewContent = ({ id }: { id: number | string  }) => {
           <div className="flex flex-row items-center justify-between">
             <h2 className="text-xl font-medium text-[#587151]">Price:</h2>
             <h2 className="text-xl font-bold text-[#537D5D]">
-              ₹{data?.prices.sachet}
+              ₹{data?.item_price[0].sachet_price}
             </h2>
           </div>
 
@@ -59,7 +62,7 @@ const ProductViewContent = ({ id }: { id: number | string  }) => {
               Weekly Bundle Price:
             </h2>
             <h2 className="text-xl font-bold text-[#537D5D]">
-              ₹{data?.prices.weeklyBundle}
+              ₹{data?.item_price[0].weekly_price}
             </h2>
           </div>
         </div>

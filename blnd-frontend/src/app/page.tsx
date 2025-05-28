@@ -12,13 +12,13 @@ import Image from "next/image";
 
 export default async function Home() {
   const data:HomeDataType=await getHomeData()
-  
+  console.log(data)
   return (
     <div className="flex flex-col size-full">
       <HeroBanner banner={data?.banner}/>
       <ContentLayout>
         <WhyChooseUs data={data?.choose_us}/>
-        <ShopBlnd/>
+        <ShopBlnd data={data?.products}/>
         <SetUsApart data={data?.set_us_apart}/>
         <HowToUse data={data?.how_to_use}/>
         <AboutUs data={data?.about_us}/>

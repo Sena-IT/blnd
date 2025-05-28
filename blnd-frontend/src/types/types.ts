@@ -7,6 +7,31 @@ export type HomeDataType = {
     contact_us:HomeDataContactUs
     footer:FooterContent
     how_to_use:HomeDataHowToUse
+    products:HomeDataProducts
+}
+
+export type HomeDataProducts={
+    item:ProductItems[]
+}
+
+export type ProductItems={
+    name:string
+    description:string
+    item_image:HomeDataIndividualBannerImageType[]
+    item_label:ItemLabel[]
+    item_price:ItemPrice[]
+    id:number
+}
+
+export type ItemPrice={
+    id:number
+    weekly_price:string
+    sachet_price:string
+}
+
+export type ItemLabel={
+    id:number
+    label:string
 }
 
 export type HomeDataHowToUse={

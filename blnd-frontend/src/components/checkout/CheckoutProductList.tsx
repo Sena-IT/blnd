@@ -2,6 +2,7 @@
 import { useAppSelector } from "@/redux/hooks";
 import React from "react";
 import ProductItemButton from "../product/ProductItemButton";
+import { base_api_url } from "@/api/constants";
 
 const CheckoutProductList = () => {
   const { items,totalAmount } = useAppSelector((state) => state.cart);
@@ -12,7 +13,7 @@ const CheckoutProductList = () => {
           <div className="flex flex-row space-x-4" key={i}>
             <div className="w-2/5">
               <img
-                src={item.image}
+                src={base_api_url+ item.image}
                 className="object-cover rounded-2xl size-full"
               />
             </div>
