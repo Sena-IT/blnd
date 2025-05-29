@@ -45,14 +45,14 @@ const ProductItem = ({ product }: { product: ProductItems }) => {
 
             <div className="space-y-2  mt-8">
               <div className="flex flex-row items-center justify-between">
-                <h2 className="text-xl font-medium text-[#587151]">Individual Sachet Price:</h2>
+                <h2 className="text-2xl font-medium text-[#587151]">Individual Sachet Price:</h2>
                 <h2 className="text-2xl font-bold text-[#537D5D]">
                    ₹{product.item_price[0].sachet_price}
                 </h2>
               </div>
 
               <div className="flex flex-row items-center justify-between">
-                <h2 className="text-xl font-medium text-[#587151]">
+                <h2 className="text-2xl font-medium text-[#587151]">
                   Weekly Bundle Price:
                 </h2>
                 <h2 className="text-2xl font-bold text-[#537D5D]">
