@@ -18,7 +18,7 @@ export type ProductItems={
     name:string
     description:string
     item_image:HomeDataIndividualBannerImageType[]
-    item_label:ItemLabel[]
+    item_labels:ItemLabel[]
     item_price:ItemPrice[]
     id:number
 }

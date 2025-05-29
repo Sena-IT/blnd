@@ -4,12 +4,13 @@ import ProductItemButton from "./ProductItemButton";
 import { useProducts } from "@/context/ProductsProvider";
 import { base_api_url } from "@/api/constants";
 
-const ProductViewContent = ({ id }: { id: number | string  }) => {
-
-  const {products}=useProducts()
+const ProductViewContent = ({ id }: { id: number | string }) => {
+  const { products } = useProducts();
   const data = products.find((prod, i) => prod.id === id);
 
-  const [seletcedImage, setSelectedImage] = useState(base_api_url+ (data?.item_image[0].url || ''));
+  const [seletcedImage, setSelectedImage] = useState(
+    base_api_url + (data?.item_image[0].url || "")
+  );
   return (
     <div className="flex flex-col lg:flex-row items-start lg:space-x-6 space-y-6">
       <div className="lg:w-1/2 w-full">
@@ -25,14 +26,15 @@ const ProductViewContent = ({ id }: { id: number | string  }) => {
             {data?.item_image.map((img, i) => (
               <div
                 key={i}
-                className={`w-[100px] overflow-hidden h-[100px] rounded-2xl ${
-                  img.url === seletcedImage && "ring-4 ring-brand-secondary"
+                className={`w-[100px] overflow-hidden h-[100px] rounded-2xl cursor-pointer ${
+                  base_api_url + img.url === seletcedImage &&
+                  "ring-4 ring-brand-secondary"
                 }`}
                 onClick={() => {
-                  setSelectedImage(img.url);
+                  setSelectedImage(base_api_url + img.url);
                 }}
               >
-                <img src={base_api_url+ img.url} />
+                <img src={base_api_url + img.url} />
               </div>
             ))}
           </div>
@@ -47,6 +49,18 @@ const ProductViewContent = ({ id }: { id: number | string  }) => {
           <p className="text-md font-normal text-brand-secondary">
             {data?.description}
           </p>
+        </div>
+
+        <div className="mt-6">
+          <div className="flex flex-col space-y-2">
+            {data?.item_labels?.map((label, i) => (
+              <div className="flex flex-row items-center space-x-6" key={i}>
+                <p className="text-md font-normal text-brand-secondary">
+                  {label.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="space-y-2  mt-8">
@@ -67,7 +81,7 @@ const ProductViewContent = ({ id }: { id: number | string  }) => {
           </div>
         </div>
 
-       <ProductItemButton id={data?.id as number}/>
+        <ProductItemButton id={data?.id as number} />
       </div>
     </div>
   );
