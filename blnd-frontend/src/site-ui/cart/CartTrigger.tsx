@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -13,22 +14,28 @@ import CartFooter from "./CartFooter";
 import CartContent from "./CartContent";
 
 const CartTrigger = () => {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleOpenChange = (isOpen: boolean) => {
+    setOpen(isOpen);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={handleOpenChange}>
       <SheetTrigger asChild className="lg:block hidden cursor-pointer">
-        <button>
+        <div>
           <CartNotifyBadge />
-        </button>
+        </div>
       </SheetTrigger>
       <SheetContent className="max-w-2xl rounded-tl-2xl rounded-bl-2xl overflow-y-auto flex flex-col">
         <SheetHeader>
           <SheetTitle className="text-lg">Cart</SheetTitle>
         </SheetHeader>
         <div className="p-3 flex-1">
-          <CartContent/>
+          <CartContent />
         </div>
         <SheetFooter className="">
-          <CartFooter/>
+          <CartFooter closeCart={() => setOpen(false)} />
         </SheetFooter>
       </SheetContent>
     </Sheet>
