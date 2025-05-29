@@ -13,7 +13,7 @@ const CartContent = () => {
     <div className="relative size-full">
       {items.length > 0 && (
         <button
-          className="fixed bottom-10 right-4 rounded-xl p-3 bg-red-700 cursor-pointer"
+          className="fixed bottom-10 right-4 rounded-xl p-3 bg-red-700 z-50 cursor-pointer"
           onClick={() => {
             dispatch(clearCart());
           }}
