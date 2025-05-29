@@ -20,7 +20,7 @@ const CheckoutProductList = () => {
             <div className="w-3/5">
               <div className="w-full flex flex-col">
                 <div className="space-y-2">
-                  <h2 className="text-lg font-semibold text-brand-secondary">
+                  <h2 className="text-lg font-semibold text-brand-secondary truncate">
                     {item.name}
                   </h2>
 

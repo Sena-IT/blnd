@@ -17,7 +17,7 @@ const AboutUs = ({ data }: { data: HomeDataAboutUs }) => {
           {data?.about_us_section.map((sec, i) => (
             <React.Fragment key={i}>
               <div
-                className={`flex flex-col rounded-2xl items-center p-6 ${
+                className={`flex flex-col rounded-2xl items-center lg:p-6 ${
                   i % 2 === 0 ? "md:flex-row " : "md:flex-row-reverse "
                 } space-x-4`}
               >
