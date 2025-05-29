@@ -3,8 +3,10 @@ import { ProductType } from "@/site-ui/shop/type";
 import React, { useState } from "react";
 import ProductModal from "./ProductModal";
 import ProductItemButton from "./ProductItemButton";
+import { ProductItems } from "@/types/types";
+import { base_api_url } from "@/api/constants";
 
-const ProductItem = ({ product }: { product: ProductType }) => {
+const ProductItem = ({ product }: { product: ProductItems }) => {
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [id, setId] = useState<number>(0);
   const openProductModal = (e:React.MouseEvent<HTMLElement>) => {
@@ -26,12 +28,12 @@ const ProductItem = ({ product }: { product: ProductType }) => {
         <div className="p-4 flex flex-col h-full">
           <div className="h-72 relative group w-full flex items-center justify-center overflow-hidden rounded-lg mb-4">
             <img
-              src={product.images[0].link}
+              src={base_api_url+product.item_image[0].url}
               alt={product.name}
               className="absolute inset-0  object-contain w-full max-h-full transition-opacity duration-500 opacity-100 group-hover:opacity-0"
             />
             <img
-              src={product.images[1]?.link || product.images[0].link}
+              src={base_api_url+ product.item_image[1]?.url || base_api_url+product.item_image[0].url}
               alt={product.name}
               className="absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0 group-hover:opacity-100"
             />
@@ -45,7 +47,7 @@ const ProductItem = ({ product }: { product: ProductType }) => {
               <div className="flex flex-row items-center justify-between">
                 <h2 className="text-xl font-medium text-[#587151]">Individual Sachet Price:</h2>
                 <h2 className="text-2xl font-bold text-[#537D5D]">
-                  ₹{product.prices.sachet}
+                   ₹{product.item_price[0].sachet_price}
                 </h2>
               </div>
 
@@ -54,7 +56,7 @@ const ProductItem = ({ product }: { product: ProductType }) => {
                   Weekly Bundle Price:
                 </h2>
                 <h2 className="text-2xl font-bold text-[#537D5D]">
-                  ₹{product.prices.weeklyBundle}
+                   ₹{product.item_price[0].weekly_price}
                 </h2>
               </div>
             </div>

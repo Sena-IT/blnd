@@ -12,7 +12,7 @@ const initialState: CartState = {
 
 const calculateTotals = (items: CartItem[]) => {
   const totalItems = items.reduce((total, item) => total + item.quantity, 0);
-  const totalAmount = items.reduce((total, item) => total + (item.price * item.quantity), 0);
+  const totalAmount = items.reduce((total, item) => total + (Number(item.price) * item.quantity), 0);
   return { totalItems, totalAmount };
 };
 

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_homepage_products",
+  "info": {
+    "displayName": "products",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "displayName": "item",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.item"
+    }
+  }
+}

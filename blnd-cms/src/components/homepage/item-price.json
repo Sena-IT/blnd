@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_homepage_item_prices",
+  "info": {
+    "displayName": "item_price"
+  },
+  "options": {},
+  "attributes": {
+    "weekly_price": {
+      "type": "string"
+    },
+    "sachet_price": {
+      "type": "string"
+    }
+  }
+}

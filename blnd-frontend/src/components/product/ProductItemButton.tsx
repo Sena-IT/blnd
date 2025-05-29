@@ -1,22 +1,29 @@
+
 import React from 'react';
 import { Button } from '../ui/button';
 
-import productsData from '../../components/product/products.json'
 import { Plus, Minus } from 'lucide-react';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { addToCart, decrementQuantity, incrementQuantity } from '@/redux/slice/cartSlice';
 import { ProductType } from '@/site-ui/shop/type';
+import { ProductItems } from '@/types/types';
+import { useProducts } from '@/context/ProductsProvider';
 
 interface ProductItemButtonProps {
   id: number;
 }
 
 
-export const getProductById = (id: number): ProductType | undefined => {
-  return productsData.find((product: ProductType) => product.id === id);
-};
 
 const ProductItemButton: React.FC<ProductItemButtonProps> = ({ id }) => {
+
+
+  const {products}=useProducts()
+
+const getProductById = (id: number): ProductItems | undefined => {
+  return products.find((product: ProductItems) => product.id === id);
+};
+
   const dispatch = useAppDispatch();
   const cartItem = useAppSelector((state) => 
     state.cart.items.find(item => item.id === id.toString())
@@ -30,8 +37,8 @@ const ProductItemButton: React.FC<ProductItemButtonProps> = ({ id }) => {
       dispatch(addToCart({
         id: product.id.toString(),
         name: product.name,
-        price: product.prices.sachet,
-        image: product.images[0].link,
+        price: product.item_price[0].sachet_price,
+        image: product.item_image[0].url,
       }));
     }
   };

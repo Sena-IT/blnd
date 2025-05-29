@@ -5,9 +5,10 @@ import React from "react";
 import products from "../../../components/product/products.json";
 import { ProductListType } from "@/site-ui/shop/type";
 import ProductItem from "@/components/product/ProductItem";
+import { HomeDataProducts } from "@/types/types";
 
-const ShopBlnd = () => {
-  const data = products as ProductListType;
+const ShopBlnd = ({data}:{data:HomeDataProducts}) => {
+  
 
   return (
     <SectionSpacingLayout>
@@ -18,7 +19,7 @@ const ShopBlnd = () => {
           A Functional Wellness Brand That Actually Works
         </h2>
         <ShopLayout className="mt-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 grid">
-          {data.map((product, i: number) => (
+          {data?.item.map((product, i: number) => (
             <React.Fragment key={i}>
               <ProductItem product={product} />
             </React.Fragment>

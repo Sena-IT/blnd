@@ -1,4 +1,5 @@
 "use client";
+import { base_api_url } from "@/api/constants";
 import ProductItemButton from "@/components/product/ProductItemButton";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { clearCart } from "@/redux/slice/cartSlice";
@@ -12,7 +13,7 @@ const CartContent = () => {
     <div className="relative size-full">
       {items.length > 0 && (
         <button
-          className="fixed bottom-10 right-4 rounded-xl p-3 bg-red-700 cursor-pointer"
+          className="fixed bottom-10 right-4 rounded-xl p-3 bg-red-700 z-50 cursor-pointer"
           onClick={() => {
             dispatch(clearCart());
           }}
@@ -27,7 +28,7 @@ const CartContent = () => {
             <div className="flex flex-row space-x-4" key={i}>
               <div className="w-2/5">
                 <img
-                  src={item.image}
+                  src={base_api_url+item?.image}
                   className="object-cover rounded-2xl size-full"
                 />
               </div>

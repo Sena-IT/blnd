@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_homepage_item_labels",
+  "info": {
+    "displayName": "item_labels"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

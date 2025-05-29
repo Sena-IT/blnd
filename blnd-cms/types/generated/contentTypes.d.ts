@@ -400,6 +400,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'api::homepage.homepage'
     > &
       Schema.Attribute.Private;
+    products: Schema.Attribute.Component<'homepage.products', false>;
     publishedAt: Schema.Attribute.DateTime;
     set_us_apart: Schema.Attribute.Component<'homepage.set-us-apart', false>;
     updatedAt: Schema.Attribute.DateTime;

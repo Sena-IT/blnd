@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_homepage_items",
+  "info": {
+    "displayName": "item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "item_price": {
+      "displayName": "item_price",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.item-price"
+    },
+    "item_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "item_labels": {
+      "displayName": "item_labels",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.item-labels"
+    }
+  }
+}
