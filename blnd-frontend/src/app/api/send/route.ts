@@ -195,9 +195,8 @@ Order received on: ${new Date().toLocaleString('en-IN', {
         });
 
         const mailOptions: Mail.Options = {
-            from: email,
+            from: process.env.NEXT_PUBLIC_MY_EMAIL,
             to: process.env.NEXT_PUBLIC_MY_EMAIL,
-            replyTo: email,
             subject: `BLND New Order - ${firstName} ${lastName} - ₹${calculatedTotal}`,
             text: textMessage,
             html: htmlMessage
