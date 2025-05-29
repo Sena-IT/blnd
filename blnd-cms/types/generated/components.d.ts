@@ -151,10 +151,11 @@ export interface HomepageItem extends Struct.ComponentSchema {
 export interface HomepageItemLabels extends Struct.ComponentSchema {
   collectionName: 'components_homepage_item_labels';
   info: {
+    description: '';
     displayName: 'item_labels';
   };
   attributes: {
-    label: Schema.Attribute.String;
+    label: Schema.Attribute.RichText;
   };
 }
 

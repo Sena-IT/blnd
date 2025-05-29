@@ -1,12 +1,13 @@
 {
   "collectionName": "components_homepage_item_labels",
   "info": {
-    "displayName": "item_labels"
+    "displayName": "item_labels",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "label": {
-      "type": "string"
+      "type": "richtext"
     }
   }
 }
