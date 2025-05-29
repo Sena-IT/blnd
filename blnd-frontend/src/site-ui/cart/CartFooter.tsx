@@ -4,11 +4,13 @@ import { useAppSelector } from "@/redux/hooks";
 import React from "react";
 import { useRouter } from "next/navigation";
 
-const CartFooter = ({closeCart}:{closeCart:()=>void}) => {
+const CartFooter = ({closeCart}:{closeCart?:()=>void}) => {
   const { totalAmount, items } = useAppSelector((state) => state.cart);
   const router=useRouter()
    const routeToCheckout=()=>{
-    closeCart()
+    if(closeCart){
+      closeCart()
+    }
     router.push('/checkout')
 
   }

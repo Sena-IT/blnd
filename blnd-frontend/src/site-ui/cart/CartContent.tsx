@@ -5,12 +5,15 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { clearCart } from "@/redux/slice/cartSlice";
 import React from "react";
 import { MdDelete } from "react-icons/md";
+import CartFooter from "./CartFooter";
 
 const CartContent = () => {
   const { items } = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
+  
   return (
-    <div className="relative size-full">
+   <React.Fragment>
+     <div className="relative size-full">
       {items.length > 0 && (
         <button
           className="fixed bottom-10 right-4 rounded-xl p-3 bg-red-700 z-50 cursor-pointer"
@@ -59,6 +62,8 @@ const CartContent = () => {
         </div>
       )}
     </div>
+    <CartFooter />
+   </React.Fragment>
   );
 };
 
