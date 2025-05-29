@@ -15,12 +15,12 @@ const SetUsApart = ({data}:{data:HomeDataSetUsApart}) => {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4 mt-10">
          {
            data.set_us_apart_points.map((c,i)=>(
-                <div key={i} className="rounded-2xl px-4 py-4 md:h-[150px] font-semibold ring-2 ring-brand-primary bg-white space-y-6">
+                <div key={i} className="rounded-2xl px-4 py-4 md:h-[180px] font-semibold ring-2 ring-brand-primary bg-white space-y-6">
                     <h2 className="text-2xl text-center text-brand-secondary font-medium">
                       {c.point_title}
                     </h2>
 
-                    <p className="text-xl  text-brand-secondary font-normal text-center">
+                    <p className="text-2xl  text-brand-secondary font-normal text-center">
                       {c.point_description}
                     </p>
                 </div>

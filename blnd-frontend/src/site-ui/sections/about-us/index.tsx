@@ -17,7 +17,7 @@ const AboutUs = ({ data }: { data: HomeDataAboutUs }) => {
           {data?.about_us_section.map((sec, i) => (
             <React.Fragment key={i}>
               <div
-                className={`flex flex-col rounded-2xl items-center lg:p-6 ${
+                className={`flex flex-col rounded-2xl items-start lg:p-6 ${
                   i % 2 === 0 ? "md:flex-row " : "md:flex-row-reverse "
                 } space-x-4`}
               >
@@ -38,7 +38,7 @@ const AboutUs = ({ data }: { data: HomeDataAboutUs }) => {
                 </div>
                 <div className="md:w-2/3 w-full" key={i}>
                   <div
-                    className="text-2xl lg:mt-0 mt-4 text-brand-secondary font-normal text-justify"
+                    className="text-3xl leading-12 lg:mt-0 mt-4 text-brand-secondary font-normal text-justify"
                     dangerouslySetInnerHTML={{
                       __html: sec.section_description,
                     }}

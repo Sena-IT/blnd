@@ -19,7 +19,7 @@ export default async function Home() {
         <ShopBlnd data={data?.products}/>
         <SetUsApart data={data?.set_us_apart}/>
         <HowToUse data={data?.how_to_use}/>
-        <AboutUs data={data?.about_us}/>
+        {/* <AboutUs data={data?.about_us}/> */}
         <ContactUs data={data?.contact_us}/>
       </ContentLayout>
     </div>

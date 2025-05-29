@@ -9,7 +9,7 @@ export const HEADER_NAVBAR_MENU=[
     },
     {
         name:'About Us',
-        link:'#about-us'
+        link:'/about-us'
     },
     {
         name:'Contact Us',

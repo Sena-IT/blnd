@@ -1,1 +1,3 @@
 export const hoempage_url='/api/homepage?populate[banner][populate]=*&populate[choose_us][populate][choose_us_points][populate]=*&populate[set_us_apart][populate][set_us_apart_points][populate]=*&populate[about_us][populate][about_us_section][populate]=*&populate[contact_us][populate][contact_info][populate]=*&populate[footer]=*&populate[how_to_use][populate][how_to_use_points][populate]=*&populate[products][populate][item][populate]=*'
+
+export const aboutus='/api/homepage?populate[about_us][populate][about_us_section][populate]=*'
