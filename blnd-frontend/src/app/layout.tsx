@@ -14,7 +14,7 @@ import Footer from "@/site-ui/sections/footer";
 import { ProductsProvider } from "@/context/ProductsProvider";
 import MobileCartIcon from "@/site-ui/cart/MobileCartIcon";
 
-const inter = League_Spartan({
+const inter = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });

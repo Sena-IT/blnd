@@ -55,7 +55,7 @@ const MainHeader = () => {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="flex flex-row items-center justify-between px-4 py-2">
+      <div className="flex flex-row items-center justify-between px-4 ">
         <BrandLogo />
         <div className="w-full flex-row lg:flex items-center justify-center hidden">
           <div className="flex flex-row items-center space-x-10">

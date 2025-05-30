@@ -38,7 +38,7 @@ const AboutUs = ({ data }: { data: HomeDataAboutUs }) => {
                 </div>
                 <div className="md:w-2/3 w-full" key={i}>
                   <div
-                    className="text-3xl leading-12 lg:mt-0 mt-4 text-brand-secondary font-normal text-justify"
+                    className="text-xl lg:text-3xl lg:leading-12 lg:mt-0 mt-4 text-brand-secondary font-normal text-justify"
                     dangerouslySetInnerHTML={{
                       __html: sec.section_description,
                     }}

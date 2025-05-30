@@ -26,8 +26,9 @@ const getProductById = (id: number): ProductItems | undefined => {
 
   const dispatch = useAppDispatch();
   const cartItem = useAppSelector((state) => 
-    state.cart.items.find(item => item.id === id.toString())
+    state.cart.items.find(item => item.id === id)
   );
+  
 
   const handleAddToCart = (e:React.MouseEvent<HTMLElement>) => {
     e.preventDefault()
@@ -35,7 +36,7 @@ const getProductById = (id: number): ProductItems | undefined => {
     const product = getProductById(id);
     if (product) {
       dispatch(addToCart({
-        id: product.id.toString(),
+        id: product.id,
         name: product.name,
         price: product.item_price[0].sachet_price,
         image: product.item_image[0].url,
@@ -44,11 +45,11 @@ const getProductById = (id: number): ProductItems | undefined => {
   };
 
   const handleIncrement = () => {
-    dispatch(incrementQuantity(id.toString()));
+    dispatch(incrementQuantity(id));
   };
 
   const handleDecrement = () => {
-    dispatch(decrementQuantity(id.toString()));
+    dispatch(decrementQuantity(id));
   };
 
   if (!cartItem || cartItem.quantity === 0) {

@@ -16,7 +16,7 @@ const WhyChooseUs = ({data}:{data:HomeDataChooseUs}) => {
           
           {data?.subtitle}
         </p>
-        <div className="space-y-4 lg:mt-12 mt-8 flex flex-col items-center justify-center">
+        <div className="md:space-y-4 space-y-6 lg:mt-12 mt-8 flex flex-col items-center justify-center">
           {data?.choose_us_points.map((p, i) => (
             <p key={i} className="text-2xl font-normal text-justify  text-brand-secondary">
               {p.point}
