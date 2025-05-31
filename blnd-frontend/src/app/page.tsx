@@ -8,6 +8,8 @@ import SetUsApart from "@/site-ui/sections/key-points";
 import ShopBlnd from "@/site-ui/sections/shop-blnd";
 import WhyChooseUs from "@/site-ui/sections/why-choose-us";
 import { HomeDataType } from "@/types/types";
+export const revalidate=0
+
 
 export default async function Home() {
   const data:HomeDataType=await getHomeData()

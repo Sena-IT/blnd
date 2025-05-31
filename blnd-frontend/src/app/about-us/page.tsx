@@ -2,6 +2,7 @@ import { getAboutUs } from '@/api/call'
 import AboutUs from '@/site-ui/sections/about-us'
 import { HomeDataAboutUs, HomeDataType } from '@/types/types'
 import React from 'react'
+export const revalidate=0
 
 const page = async() => {
     const data:HomeDataType=await getAboutUs()
