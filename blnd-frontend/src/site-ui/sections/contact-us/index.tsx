@@ -76,7 +76,7 @@ const ContactUs = ({ data }: { data: HomeDataContactUs }) => {
           <h2 className="text-3xl text-brand-secondary font-medium text-center">
             {data?.title}
           </h2>
-          <p className="text-2xl mt-4 font-normal text-brand-secondary text-justify md:text-center">
+          <p className="text-2xl mt-4 font-normal text-brand-secondary text-center">
             {data?.subtitle}
           </p>
         </div>

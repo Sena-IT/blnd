@@ -151,7 +151,7 @@ const CheckoutForm = () => {
       <Button 
       onClick={checkout}
       className="cursor-pointer bg-brand-primary text-brand-secondary w-full h-12 hover:bg-brand-primary font-semibold text-lg">
-        Pay now
+        Submit
       </Button>
     </div>
   );

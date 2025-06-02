@@ -12,13 +12,13 @@ const WhyChooseUs = ({data}:{data:HomeDataChooseUs}) => {
         <h2 className="text-3xl text-brand-secondary font-medium text-center">
           {data?.title}
         </h2>
-        <p className="text-2xl mt-4 font-normal text-brand-secondary text-justify md:text-center">
+        <p className="text-2xl mt-4 font-normal text-brand-secondary text-center">
           
           {data?.subtitle}
         </p>
         <div className="md:space-y-4 space-y-6 lg:mt-12 mt-8 flex flex-col items-center justify-center">
           {data?.choose_us_points.map((p, i) => (
-            <p key={i} className="text-2xl font-normal text-justify  text-brand-secondary">
+            <p key={i} className="text-2xl font-normal text-center  text-brand-secondary">
               {p.point}
             </p>
           ))}

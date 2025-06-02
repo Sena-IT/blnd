@@ -12,7 +12,7 @@ const HowToUse = ({ data }: { data: HomeDataHowToUse }) => {
         <h2 className="text-3xl text-brand-secondary font-medium text-center">
           {data?.title}
         </h2>
-        <p className="text-2xl mt-4 font-normal text-brand-secondary text-justify md:text-center">
+        <p className="text-2xl mt-4 font-normal text-brand-secondary text-center">
           {data?.subtitle}
         </p>
       </div>
@@ -21,10 +21,10 @@ const HowToUse = ({ data }: { data: HomeDataHowToUse }) => {
       {
         data?.how_to_use_points.map((points,i)=>(
           <div className="rounded-2xl p-4 space-y-2 bg-lime-50" key={i}>
-            <h2 className="text-2xl font-semibold text-brand-secondary">
+            <h2 className="text-2xl font-semibold text-center md:text-left text-brand-secondary">
              {points.point_title}
             </h2>
-            <p className="text-2xl font-normal text-brand-secondary">
+            <p className="text-2xl font-normal text-center md:text-left text-brand-secondary">
             {points.point_description}
             </p>
           </div>

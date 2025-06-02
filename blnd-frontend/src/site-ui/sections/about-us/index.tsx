@@ -32,13 +32,13 @@ const AboutUs = ({ data }: { data: HomeDataAboutUs }) => {
                   <div>
                     <img
                       src={base_api_url + sec.about_us_media.url}
-                      className="h-[500px] w-[500px] object-contain"
+                      className="md:h-[500px] md:w-[500px] w-[200px] h-[200px] object-contain"
                     />
                   </div>
                 </div>
                 <div className="md:w-2/3 w-full" key={i}>
                   <div
-                    className="text-xl lg:text-3xl lg:leading-12 lg:mt-0 mt-4 text-brand-secondary font-normal text-justify"
+                    className="text-2xl lg:text-3xl lg:leading-12 lg:mt-0 mt-4 text-brand-secondary font-normal text-center md:text-justify"
                     dangerouslySetInnerHTML={{
                       __html: sec.section_description,
                     }}

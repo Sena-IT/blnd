@@ -8,7 +8,7 @@ const CheckoutProductList = () => {
   const { items,totalAmount } = useAppSelector((state) => state.cart);
   return (
     <div className="">
-      <div className="space-y-6 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="space-y-6 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
         {items.map((item, i) => (
           <div className="flex flex-row space-x-4" key={i}>
             <div className="w-2/5">

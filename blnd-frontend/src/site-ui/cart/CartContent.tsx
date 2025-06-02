@@ -12,9 +12,9 @@ const CartContent = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-[calc(100vh-100px)] lg:h-full">
     
-      <div className="flex-1 overflow-y-auto pb-4">
+      <div className="flex-1 overflow-y-auto">
         {items.length > 0 && (
           <button
             className="fixed bottom-10 right-4 rounded-xl p-3 bg-red-700 z-50 cursor-pointer"
