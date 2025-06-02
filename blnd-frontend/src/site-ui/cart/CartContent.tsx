@@ -12,8 +12,9 @@ const CartContent = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <React.Fragment>
-      <div className="relative size-full">
+    <div className="flex flex-col h-full">
+    
+      <div className="flex-1 overflow-y-auto pb-4">
         {items.length > 0 && (
           <button
             className="fixed bottom-10 right-4 rounded-xl p-3 bg-red-700 z-50 cursor-pointer"
@@ -26,13 +27,14 @@ const CartContent = () => {
         )}
 
         {items.length > 0 ? (
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 h-full">
             {items.map((item, i) => (
               <div className="flex flex-row space-x-4" key={i}>
                 <div className="w-2/5">
                   <img
                     src={base_api_url + item?.image}
                     className="object-cover rounded-2xl size-full"
+                    alt={item.name}
                   />
                 </div>
                 <div className="w-3/5">
@@ -62,10 +64,12 @@ const CartContent = () => {
           </div>
         )}
       </div>
-      <div className="lg:hidden mt-12">
+      
+    
+      <div className="lg:hidden flex-shrink-0">
         <CartFooter />
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

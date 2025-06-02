@@ -224,7 +224,7 @@ Order received on: ${new Date().toLocaleString('en-IN', {
         return NextResponse.json({
             success: false,
             message: "Failed to send order email",
-            error: "Error Processing Order"
+            error: `Error Processing Order ${error}`
         }, { status: 500 });
     }
 

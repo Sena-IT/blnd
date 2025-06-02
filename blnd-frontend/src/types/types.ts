@@ -109,5 +109,5 @@ export type HomeDataContactUsPoints={
     instagram:string
     location:string
     email:string
-    linkedIn:string
+    linkedin:string
 }

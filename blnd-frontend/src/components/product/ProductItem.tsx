@@ -39,7 +39,7 @@ const ProductItem = ({ product }: { product: ProductItems }) => {
             />
           </div>
           <div className="flex-grow">
-            <h2 className="text-3xl font-medium text-brand-secondary line-clamp-2 h-[62px] flex items-start justify-center">
+            <h2 className="text-3xl font-medium text-brand-secondary line-clamp-2 h-[65px] flex items-start justify-center">
               {product.name}
             </h2>
 

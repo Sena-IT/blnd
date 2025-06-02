@@ -13,6 +13,6 @@ export const HEADER_NAVBAR_MENU=[
     },
     {
         name:'Contact Us',
-        link:'#contact-us'
+        link:'https://blndwellness.com/#contact-us'
     }
 ]
